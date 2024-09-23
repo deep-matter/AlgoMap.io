@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://leetcode.com" target="_blank">
-    <img src="https://assets.leetcode.com/static_assets/public/icons/favicon-192x192.png" alt="LeetCode Logo" width="100" height="100">
+    <img src="https://assets.leetcode.com/static_assets/public/icons/favicon-192x192.png" alt="LeetCode Logo" width="400" height="200">
   </a>
 </p>
 
@@ -42,26 +42,28 @@ This repository contains:
 5. Check your solutions against our implementations in the `solutions/` directory.
 6. Dive deep into the `explanations/` for comprehensive understanding.
 
+
+### Courses and related  Articles [comming-soon]
+
 ## 🤝 Contributing
 
-We welcome contributions from the community! If you'd like to add a problem, solution, or explanation:
+We are excited to welcome contributions from the community! If you'd like to contribute by adding new problems, solutions, or explanations, follow these steps:
 
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/AmazingAlgorithm`)
-3. Commit your changes (`git commit -m 'Add AmazingAlgorithm problem and solution'`)
-4. Push to the branch (`git push origin feature/AmazingAlgorithm`)
-5. Open a Pull Request
+1. **Fork the repository**: Start by creating your own copy of the repository.
+2. **Create a new branch**: Make sure to create a feature branch to work on, using a descriptive name (e.g., `feature/add-two-sum-solution`).
+3. **Commit your changes**: Write clear, concise commit messages explaining what you’ve added or modified.
+4. **Push to the branch**: Push your local branch to your forked repository on GitHub.
+5. **Open a Pull Request**: Once your changes are ready, open a pull request and explain the modifications you've made.
 
+i will review your submission and provide feedback as needed. Thank you for helping me improve and grow this project!
 Please ensure your code is well-commented and includes a detailed explanation.
 
-## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+### Buitl by 
 
-## 📞 Contact
-
-If you have any questions or suggestions, please open an issue or contact us at support@algomap.io.
-
-Happy coding and good luck with your interviews! 🍀
-
+<p align="center">
+  <a href="https://github.com/deep-matter" class="fancybox" ><img src="https://user-images.githubusercontent.com/63207451/97302854-e484da80-1859-11eb-9374-5b319ca51197.png" title="GitHub" width="40" height="40"></a>
+  <a href="https://www.linkedin.com/in/youness-el-brag-b13628203/" class="fancybox" ><img src="https://user-images.githubusercontent.com/63207451/97303444-b2c04380-185a-11eb-8cfc-864c33a64e4b.png" title="LinkedIn" width="40" height="40"></a>
+  <a href="mailto:younsselbrag@gmail.com" class="fancybox" ><img src="https://user-images.githubusercontent.com/63207451/97303543-cec3e500-185a-11eb-8adc-c1364e2054a9.png" title="Mail" width="40" height="40"></a>
+</p>
 
