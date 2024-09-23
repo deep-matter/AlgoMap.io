@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://leetcode.com" target="_blank">
-    <img src="https://leetcode.com/static/images/LeetCode_Sharing.png" alt="LeetCode Logo" width="400" height="400">
+    <img src="https://assets.leetcode.com/static_assets/public/icons/favicon-192x192.png" alt="LeetCode Logo" width="300" height="300">
   </a>
 </p>
 
