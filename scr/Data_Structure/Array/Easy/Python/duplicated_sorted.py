@@ -11,13 +11,8 @@ class Solution(object):
         k = 1
         
         for i in range(1, len(nums)):
-            print(i, k - 1)
             if nums[i] != nums[k - 1]:
-                # print(nums[i])
-                # print(nums[k - 1])
-                print(k , i )
                 nums[k] = nums[i]  
-                # print(nums[k] , nums[i]   )
                 k += 1
         
         return k 
