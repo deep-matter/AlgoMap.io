@@ -23,8 +23,5 @@ class Solution(object):
 if __name__ =="__main__":
     algo = Solution()
     num = [0,0,1,1,1,2,2,3,3,4]
-    k    = algo.removeDuplicates(num)
-    print(k  )
-   
-       
-    
+    k = algo.removeDuplicates(num)
+    print(k)
