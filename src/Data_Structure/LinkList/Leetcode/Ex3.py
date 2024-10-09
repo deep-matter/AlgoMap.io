@@ -25,13 +25,32 @@ class Solution(object):
 
         You may not modify the values in the list's nodes. Only nodes themselves may be changed.
         Problem : 
-        Input: head = [1,2,3,4,None]
+        Input: head = [1,2,3,4,5]
         Output: [1,5,2,4,3]
 
         """
-
+        dumy = ListNode(0)
+        dumy.next = head
+        current = dumy.next
         node_queeu = deque()
-        pass
+
+        while current:
+            node_queeu.append(current)
+            current = current.next
+
+        even = False 
+        current = current.next
+
+        while node_queeu:
+            node = node_queeu.pop() if even else node_queeu.popleft()
+            node.next = None
+            current = node
+            even ^= True
+
+        return head
+
+
+        
 
 
 
@@ -39,19 +58,7 @@ class Solution(object):
 
 
 if __name__ == "__main__":
-    reverse= []
-    list1 = deque([1,2,3,4,5,6])
-    i = len(list1)
-    for i in list1:
-        #print(i)
-        reverse.append(i)
-
-        #i -= 1
-    list1.peek()
-    #list1.pop()
-    list1.popleft()
-    print(list1)
-
+    pass
 
 
 
