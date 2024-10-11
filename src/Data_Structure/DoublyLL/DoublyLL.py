@@ -56,6 +56,39 @@ class DoublyLinklist:
 
         return True
 
+    def pop_first(self):
+
+        if self.length == 0:
+            return False 
+        
+        if self.length == 1:
+            self.head = None 
+            self.tail = None
+        else:
+            next_head = self.head.next
+            self.head.pres = None
+            self.head = next_head
+
+            self.length -=1 
+        
+        return True
+
+    def get_index_node(self,index):
+        if index < 0 or index > self.length:
+            return False 
+        forward = self.head
+        if index < (self.length // 2 ):
+            for _ in range(index):
+                forward = forward.next
+        else:
+            forward = self.tail
+            for _ in range(self.length - 1 , index , -1):
+                forward = forward.pres
+
+        return forward
+
+            
+
 
 
         
@@ -88,8 +121,11 @@ if __name__ == "__main__":
     DLL.append(4)
     #DLL.pop()
     DLL.repend(4)
-    DLL.repend(8)
-
+    #DLL.repend(8)
+    DLL.pop_first()
+    DLL.get_index_node(0)
+    print(DLL.get_index_node(0).value)
+    print(DLL.get_index_node(2).value)
 
 
     DLL.print_dll()
