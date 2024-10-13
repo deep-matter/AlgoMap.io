@@ -49,7 +49,7 @@ class Solution(object):
         while l1 != None and l2 != None and carry != 0:
             val_1 =  l1.val if l1 != None else 0
             val_2 =  l2.val if l2 != None else 0 
-            
+
             SumUP = val_1 + val_2 + carry
 
             if SumUP % 10 == SumUP:
@@ -67,7 +67,27 @@ class Solution(object):
         return dumy.next
             
 
+class Solution(object):
 
+    def addTwoNumbers(self, l1, l2):
+        carry = 0
+        dummy_head = ListNode(0)
+        current = dummy_head
+
+        while l1 or l2 or carry:
+            l1_current = l1.val if l1 else 0
+            l2_current = l2.val if l2 else 0
+
+            total = l1_current + l2_current + carry
+            carry = total // 10
+            current.next = ListNode(total % 10)
+            current = current.next
+
+
+            if l1: l1 = l1.next
+            if l2: l2 = l2.next
+
+        return dummy_head.next
 
 
 

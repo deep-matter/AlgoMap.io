@@ -19,23 +19,15 @@ Output: [["a"]]
 """
 
 
-case_1 = "aab"
-case_2 =  "a"
-slices = 0
-chars = []
-for char in case_1:
-    chars.append(chars[char])
-    slices +=1 
-    
-
-# for idx in chars:
-    
-    
-
-
-
-
-print(chars)
+def recur(s,p):
+    if not s:
+        res.append(p)
+    for i in range(len(s)):
+        if s[:i+1] == s[:i+1][::-1]:
+            recur(s[i+1:],p+[s[:i+1]])
+    res = []
+    recur(s,[])
+    return res
 
 
 
