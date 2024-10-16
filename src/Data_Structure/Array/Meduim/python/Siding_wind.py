@@ -33,7 +33,7 @@ Output: [3,3,5,5,6,7]
 
 
 
-class Solution(object):
+class Solution_1(object):
     def maxSlidingWindow(self, nums, k):
         """
         :type nums: List[int]
@@ -67,6 +67,37 @@ class Solution(object):
             j +=1
             
         return MaxItems
+
+
+class Solution(object):
+    def maxSlidingWindow(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        from collections import deque
+        queue = deque()
+
+        output = []
+
+        l = r = 0 
+
+        while r < len(nums):
+            while queue and nums[queue[-1]] < len(nums[r]):
+                queue.pop()
+            queue.append(r)
+
+            if l > queue[0]:
+                queue.popleft()
+
+            if (r + 1) >=  k:
+                output.append(nums[queue[0]])
+                l +=1 
+            
+            r+=1 
+
+        return output
 
 
 
