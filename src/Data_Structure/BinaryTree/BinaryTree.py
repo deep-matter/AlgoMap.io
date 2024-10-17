@@ -34,14 +34,75 @@ class BinaryTree(object):
                         return True
 
                     temp = temp.right
+    
+    def contain(self,value):
+
+        if self.root == None:
+            return False 
         
+        temp = self.root
+        if temp.value == value:
+            return True
+        else:
+            while(True):
+                if temp is None:
+                    return False
+
+                if temp.value == value:
+                    return True
+
+                if value > temp.value:
+                    
+                    if temp.right is None:
+                        if temp.value == value:
+                            return True
+                   
+                    temp = temp.right
+
+                    
+                else:
+                    if temp.left is not None:
+                        if value == temp.value:
+                            return True
+                                       
+                    temp = temp.left
+
+    def recursion_contain(self,current_node,value):
+        if current_node == None:
+            return False 
+
+        if current_node.value == value :
+            return True
+            
+        if value < current_node.value:
+            return self.recursion_contain(current_node.left ,value)
+
+        if value > current_node.value:
+            return self.recursion_contain(current_node.right,value)
+        
+        def __r_contain(self ,value):
+            return self.recursion_contain(self.root,value)
+    def Breath_firt_search(self):
+        from collections import deque
+
+        queue = deque()
+        resultes = [ ]
+        current_node = self.root
+
+        queue.append(current_node)
+        while len(queue) > 0:
+            current_node = queue.popleft()
+            resultes.append(current_node.value)
+            if current_node.left is not None:
+                queue.append(current_nod.left)
+            if current_node.right is not None :
+                queue.append(current_node.right)
+        return resultes
+
+
 
 
         
-
-        
-        
-
     def print_tree(self):
         if self.root == None :
             print(self.root)
@@ -50,7 +111,7 @@ class BinaryTree(object):
             print(tree.value)
             if tree.left:
                 tree
-            else:
+            else: 
                 tree = tree.right
 
 
@@ -62,6 +123,10 @@ if __name__ =="__main__":
     tree.insert(3)
     tree.insert(4)
     tree.insert(2)
+    tree.insert(5)
+    print(tree.contain(3))
+    print(tree.Breath_firt_search())
+
 
 
 
