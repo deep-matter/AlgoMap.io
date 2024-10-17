@@ -82,6 +82,7 @@ class BinaryTree(object):
         
         def __r_contain(self ,value):
             return self.recursion_contain(self.root,value)
+
     def Breath_firt_search(self):
         from collections import deque
 
@@ -94,10 +95,60 @@ class BinaryTree(object):
             current_node = queue.popleft()
             resultes.append(current_node.value)
             if current_node.left is not None:
-                queue.append(current_nod.left)
+                queue.append(current_node.left)
             if current_node.right is not None :
                 queue.append(current_node.right)
         return resultes
+    
+    def Depth_first_search(self):
+        result= []
+        def traversal(current_node):
+            result.append(current_node.value)
+            if current_node.left is not None:
+                traversal(current_node.left)
+            if current_node.right is not None:
+                traversal(current_node.right)
+            
+        traversal(self.root)
+        return result
+
+    def Depth_first_search_post(self):
+        result= []
+        def traversal(current_node):
+            if current_node.left is not None:
+                traversal(current_node.left)
+            if current_node.right is not None:
+                traversal(current_node.right)
+
+            result.append(current_node.value)
+
+            
+        traversal(self.root)
+        return result
+
+    def Depth_first_search_post(self):
+        result= []
+        def traversal(current_node):
+            if current_node.left is not None:
+                traversal(current_node.left)
+            result.append(current_node.value)
+            if current_node.right is not None:
+                traversal(current_node.right)
+
+
+            
+        traversal(self.root)
+        return result
+
+
+    
+
+
+
+       
+
+
+
 
 
 
@@ -118,18 +169,22 @@ class BinaryTree(object):
 
 if __name__ =="__main__":
     tree = BinaryTree()
-    tree.insert(1)
-    tree.insert(2)
-    tree.insert(3)
-    tree.insert(4)
-    tree.insert(2)
-    tree.insert(5)
+    tree.insert(12)
+    tree.insert(10)
+    tree.insert(11)
+    tree.insert(9)
+    tree.insert(13)
+    tree.insert(15)
+    tree.insert(14)
     print(tree.contain(3))
     print(tree.Breath_firt_search())
+    print(tree.Depth_first_search())
+    print(tree.Depth_first_search_post())
 
 
 
 
 
 
-    tree.print_tree()
+
+    #tree.print_tree()
