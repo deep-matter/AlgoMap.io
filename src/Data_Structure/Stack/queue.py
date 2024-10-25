@@ -33,7 +33,7 @@ class Queue(object):
             return False 
         
         current = self.first
-        self.first=  current.next
+        self.first =  current.next
         current.next = None 
         self.length -=1 
 

@@ -126,7 +126,7 @@ class BinaryTree(object):
         traversal(self.root)
         return result
 
-    def Depth_first_search_post(self):
+    def Depth_first_search_ioder(self):
         result= []
         def traversal(current_node):
             if current_node.left is not None:
@@ -180,6 +180,9 @@ if __name__ =="__main__":
     print(tree.Breath_firt_search())
     print(tree.Depth_first_search())
     print(tree.Depth_first_search_post())
+    print(tree.Depth_first_search_ioder())
+
+
 
 
 

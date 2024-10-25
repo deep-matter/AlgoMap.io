@@ -17,8 +17,9 @@ class Solution(object):
         """
         s = ""
         rest = 0
+        if len(word1) == len(word2):
         for (item_i , item_2) in zip(word1, word2):
-            if len(word1) == len(word2):
+            
                 s+= item_i + item_2 
             else:
                 s+= item_i + item_2 
