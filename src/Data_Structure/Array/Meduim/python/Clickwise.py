@@ -17,7 +17,6 @@ def print_clickwise(matrix):
         for i in range(left, right + 1):
             result.append(matrix[top][i])
         top += 1
-        print(top)
         
         # Traverse the right column
         for i in range(top, bottom + 1):
